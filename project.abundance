@@ -40,8 +40,8 @@
         {
             "atomType": "Molecule",
             "name": "Fence Post",
-            "x": 0.1316137566137566,
-            "y": 0.42618384401114207,
+            "x": 0.13558201058201058,
+            "y": 0.4428969359331476,
             "uniqueID": 1721415225548,
             "ioValues": [],
             "topLevel": false,
@@ -52,23 +52,127 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1721415226036,
-                    "ioValues": []
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": 1721415520427
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.24007936507936506,
+                    "y": 0.415041782729805,
+                    "uniqueID": 1721415467882,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1.75
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.4021164021164021,
+                    "y": 0.5459610027855153,
+                    "uniqueID": 1721415474551,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721415467882
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 96
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Add-BOM-Tag",
+                    "name": "Add BOM Tag",
+                    "x": 0.5773809523809523,
+                    "y": 0.41225626740947074,
+                    "uniqueID": 1721415505088,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721415474551
+                        }
+                    ],
+                    "BOMitem": {
+                        "BOMitemName": "Fence Post",
+                        "numberNeeded": 1,
+                        "costUSD": 0,
+                        "source": "www.example.com"
+                    }
+                },
+                {
+                    "atomType": "Color",
+                    "name": "Color",
+                    "x": 0.6825396825396826,
+                    "y": 0.596100278551532,
+                    "uniqueID": 1721415520427,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721415505088
+                        }
+                    ],
+                    "selectedColorIndex": 5
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721415467882,
+                    "ap2ID": 1721415474551
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721415474551,
+                    "ap2ID": 1721415505088
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721415505088,
+                    "ap2ID": 1721415520427
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1721415520427,
+                    "ap2ID": 1721415226036
+                }
+            ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": [
+                {
+                    "BOMitemName": "Fence Post",
+                    "numberNeeded": 1,
+                    "costUSD": 0,
+                    "source": "www.example.com"
+                }
+            ]
         },
         {
             "atomType": "Molecule",
             "name": "Fence Section",
-            "x": 0.2347883597883598,
-            "y": 0.6350974930362118,
+            "x": 0.23875661375661375,
+            "y": 0.6295264623955432,
             "uniqueID": 1721415232788,
             "ioValues": [
                 {
                     "name": "Post",
-                    "ioValue": 10
+                    "ioValue": 1721415225548
                 }
             ],
             "topLevel": false,
@@ -396,6 +500,20 @@
                     ],
                     "gitHubUniqueID": 801181204,
                     "fileTypeVersion": 1
+                },
+                {
+                    "atomType": "Join",
+                    "name": "Assembly",
+                    "x": 0.6461640211640212,
+                    "y": 0.43732590529247906,
+                    "uniqueID": 1721415562524,
+                    "ioValues": [
+                        {
+                            "name": "3D shape 1",
+                            "ioValue": 1721415337892
+                        }
+                    ],
+                    "unionType": "Assembly"
                 }
             ],
             "allConnectors": [
@@ -405,6 +523,13 @@
                     "ap2Primary": false,
                     "ap1ID": 1721415250838,
                     "ap2ID": 1721415337892
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "3D shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": 1721415337892,
+                    "ap2ID": 1721415562524
                 }
             ],
             "fileTypeVersion": 1,
@@ -418,6 +543,13 @@
             "ap2Primary": false,
             "ap1ID": 1721415218390,
             "ap2ID": 1721415214313
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "Post",
+            "ap2Primary": false,
+            "ap1ID": 1721415225548,
+            "ap2ID": 1721415232788
         }
     ],
     "unitsKey": "Inches",
