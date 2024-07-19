@@ -548,6 +548,128 @@
                             "ioValue": 0
                         }
                     ]
+                },
+                {
+                    "atomType": "Molecule",
+                    "name": "Support Board",
+                    "x": 0.4305555555555555,
+                    "y": 0.871866295264624,
+                    "uniqueID": 1721415718405,
+                    "ioValues": [],
+                    "topLevel": false,
+                    "allAtoms": [
+                        {
+                            "atomType": "Output",
+                            "name": "Output",
+                            "x": 0.98,
+                            "y": 0.5,
+                            "uniqueID": 1721415718879,
+                            "ioValues": []
+                        },
+                        {
+                            "atomType": "Rectangle",
+                            "name": "Rectangle",
+                            "x": 0.17592592592592593,
+                            "y": 0.5097493036211699,
+                            "uniqueID": 1721415736537,
+                            "ioValues": [
+                                {
+                                    "name": "x length",
+                                    "ioValue": 3.5
+                                },
+                                {
+                                    "name": "y length",
+                                    "ioValue": 1.5
+                                }
+                            ]
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.3108465608465608,
+                            "y": 0.5626740947075208,
+                            "uniqueID": 1721415749208,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1721415736537
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 120
+                                }
+                            ]
+                        },
+                        {
+                            "atomType": "Rotate",
+                            "name": "Rotate",
+                            "x": 0.4497354497354497,
+                            "y": 0.5403899721448467,
+                            "uniqueID": 1721415764940,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1721415749208
+                                },
+                                {
+                                    "name": "x-axis degrees",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "y-axis degrees",
+                                    "ioValue": 90
+                                },
+                                {
+                                    "name": "z-axis degrees",
+                                    "ioValue": 0
+                                }
+                            ]
+                        },
+                        {
+                            "atomType": "Add-BOM-Tag",
+                            "name": "Add BOM Tag",
+                            "x": 0.6071428571428572,
+                            "y": 0.5125348189415042,
+                            "uniqueID": 1721415786752,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1721415764940
+                                }
+                            ],
+                            "BOMitem": {
+                                "BOMitemName": "Support Board",
+                                "numberNeeded": 1,
+                                "costUSD": 0,
+                                "source": "www.example.com"
+                            }
+                        }
+                    ],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1721415736537,
+                            "ap2ID": 1721415749208
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1721415749208,
+                            "ap2ID": 1721415764940
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1721415764940,
+                            "ap2ID": 1721415786752
+                        }
+                    ],
+                    "fileTypeVersion": 1,
+                    "compiledBom": {}
                 }
             ],
             "allConnectors": [
