@@ -104,7 +104,7 @@
                     "BOMitem": {
                         "BOMitemName": "Fence Post",
                         "numberNeeded": 1,
-                        "costUSD": 0,
+                        "costUSD": 23,
                         "source": "www.example.com"
                     }
                 },
@@ -158,7 +158,7 @@
                 {
                     "BOMitemName": "Fence Post",
                     "numberNeeded": 1,
-                    "costUSD": 0,
+                    "costUSD": 23,
                     "source": "www.example.com"
                 }
             ]
@@ -166,8 +166,8 @@
         {
             "atomType": "Molecule",
             "name": "Fence Section",
-            "x": 0.23875661375661375,
-            "y": 0.6295264623955432,
+            "x": 0.2830687830687831,
+            "y": 0.6323119777158774,
             "uniqueID": 1721415232788,
             "ioValues": [
                 {
@@ -216,7 +216,7 @@
                             "ioValues": [
                                 {
                                     "name": "number or geometry",
-                                    "ioValue": 1721415281717
+                                    "ioValue": 1721415910653
                                 }
                             ]
                         },
@@ -257,8 +257,8 @@
                         {
                             "atomType": "Add-BOM-Tag",
                             "name": "Add BOM Tag",
-                            "x": 0.6461640211640212,
-                            "y": 0.7437325905292479,
+                            "x": 0.6931216931216931,
+                            "y": 0.5626740947075208,
                             "uniqueID": 1721415910653,
                             "ioValues": [
                                 {
@@ -284,21 +284,28 @@
                         },
                         {
                             "ap1Name": "geometry",
-                            "ap2Name": "number or geometry",
-                            "ap2Primary": false,
-                            "ap1ID": 1721415281717,
-                            "ap2ID": 1721415250215
-                        },
-                        {
-                            "ap1Name": "geometry",
                             "ap2Name": "geometry",
                             "ap2Primary": true,
                             "ap1ID": 1721415281717,
                             "ap2ID": 1721415910653
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": 1721415910653,
+                            "ap2ID": 1721415250215
                         }
                     ],
                     "fileTypeVersion": 1,
-                    "compiledBom": []
+                    "compiledBom": [
+                        {
+                            "BOMitemName": "Fence Board",
+                            "numberNeeded": 1,
+                            "costUSD": 1.92,
+                            "source": "www.example.com"
+                        }
+                    ]
                 },
                 {
                     "atomType": "GitHubMolecule",
