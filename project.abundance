@@ -166,8 +166,8 @@
         {
             "atomType": "Molecule",
             "name": "Fence Section",
-            "x": 0.2830687830687831,
-            "y": 0.6323119777158774,
+            "x": 0.2837301587301587,
+            "y": 0.6267409470752089,
             "uniqueID": 1721415232788,
             "ioValues": [
                 {
@@ -607,8 +607,8 @@
                         {
                             "atomType": "Rectangle",
                             "name": "Rectangle",
-                            "x": 0.17592592592592593,
-                            "y": 0.5097493036211699,
+                            "x": 0.13756613756613756,
+                            "y": 0.29526462395543174,
                             "uniqueID": 1721415736537,
                             "ioValues": [
                                 {
@@ -624,8 +624,8 @@
                         {
                             "atomType": "Extrude",
                             "name": "Extrude",
-                            "x": 0.3108465608465608,
-                            "y": 0.5626740947075208,
+                            "x": 0.2810846560846561,
+                            "y": 0.34540389972144847,
                             "uniqueID": 1721415749208,
                             "ioValues": [
                                 {
@@ -641,8 +641,8 @@
                         {
                             "atomType": "Rotate",
                             "name": "Rotate",
-                            "x": 0.4497354497354497,
-                            "y": 0.5403899721448467,
+                            "x": 0.42394179894179895,
+                            "y": 0.4094707520891365,
                             "uniqueID": 1721415764940,
                             "ioValues": [
                                 {
@@ -666,8 +666,8 @@
                         {
                             "atomType": "Add-BOM-Tag",
                             "name": "Add BOM Tag",
-                            "x": 0.6071428571428572,
-                            "y": 0.5125348189415042,
+                            "x": 0.5641534391534392,
+                            "y": 0.2924791086350975,
                             "uniqueID": 1721415786752,
                             "ioValues": [
                                 {
@@ -681,6 +681,42 @@
                                 "costUSD": 3.25,
                                 "source": "www.example.com"
                             }
+                        },
+                        {
+                            "atomType": "Molecule",
+                            "name": "Post Bracket",
+                            "x": 0.1898148148148148,
+                            "y": 0.7158774373259054,
+                            "uniqueID": 1721416251396,
+                            "ioValues": [],
+                            "topLevel": false,
+                            "allAtoms": [
+                                {
+                                    "atomType": "Output",
+                                    "name": "Output",
+                                    "x": 0.98,
+                                    "y": 0.5,
+                                    "uniqueID": 1721416251325,
+                                    "ioValues": []
+                                },
+                                {
+                                    "atomType": "Add-BOM-Tag",
+                                    "name": "Add BOM Tag",
+                                    "x": 0.24603174603174605,
+                                    "y": 0.5877437325905293,
+                                    "uniqueID": 1721416262151,
+                                    "ioValues": [],
+                                    "BOMitem": {
+                                        "BOMitemName": "name",
+                                        "numberNeeded": 1,
+                                        "costUSD": 2.9,
+                                        "source": "https://www.hooverfence.com/nw6287-pg-nationwide-industries-wood-panel-to-chain-link-post-bracket"
+                                    }
+                                }
+                            ],
+                            "allConnectors": [],
+                            "fileTypeVersion": 1,
+                            "compiledBom": {}
                         }
                     ],
                     "allConnectors": [
