@@ -6,10 +6,106 @@
     "uniqueID": 1721414992264,
     "ioValues": [],
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": 1721415214313,
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1721415218390
+                }
+            ]
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.742063492063492,
+            "y": 0.4094707520891365,
+            "uniqueID": 1721415218390,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Fence Post",
+            "x": 0.13756613756613756,
+            "y": 0.4317548746518106,
+            "uniqueID": 1721415225548,
+            "ioValues": [],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": 1721415226036,
+                    "ioValues": []
+                }
+            ],
+            "allConnectors": [],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Fence Section",
+            "x": 0.2347883597883598,
+            "y": 0.6350974930362118,
+            "uniqueID": 1721415232788,
+            "ioValues": [
+                {
+                    "name": "Post",
+                    "ioValue": 10
+                }
+            ],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": 1721415232893,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Post",
+                    "x": 0.013333333333333334,
+                    "y": 0.5292479108635098,
+                    "uniqueID": 1721415241839,
+                    "ioValues": []
+                }
+            ],
+            "allConnectors": [],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1721415218390,
+            "ap2ID": 1721415214313
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
