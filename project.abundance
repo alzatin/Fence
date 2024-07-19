@@ -253,6 +253,25 @@
                                     "ioValue": 72
                                 }
                             ]
+                        },
+                        {
+                            "atomType": "Add-BOM-Tag",
+                            "name": "Add BOM Tag",
+                            "x": 0.6461640211640212,
+                            "y": 0.7437325905292479,
+                            "uniqueID": 1721415910653,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1721415281717
+                                }
+                            ],
+                            "BOMitem": {
+                                "BOMitemName": "Fence Board",
+                                "numberNeeded": 1,
+                                "costUSD": 1.92,
+                                "source": "www.example.com"
+                            }
                         }
                     ],
                     "allConnectors": [
@@ -269,6 +288,13 @@
                             "ap2Primary": false,
                             "ap1ID": 1721415281717,
                             "ap2ID": 1721415250215
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1721415281717,
+                            "ap2ID": 1721415910653
                         }
                     ],
                     "fileTypeVersion": 1,
@@ -552,8 +578,8 @@
                 {
                     "atomType": "Molecule",
                     "name": "Support Board",
-                    "x": 0.4305555555555555,
-                    "y": 0.871866295264624,
+                    "x": 0.38888888888888884,
+                    "y": 0.8690807799442898,
                     "uniqueID": 1721415718405,
                     "ioValues": [],
                     "topLevel": false,
@@ -564,7 +590,12 @@
                             "x": 0.98,
                             "y": 0.5,
                             "uniqueID": 1721415718879,
-                            "ioValues": []
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": 1721415786752
+                                }
+                            ]
                         },
                         {
                             "atomType": "Rectangle",
@@ -640,7 +671,7 @@
                             "BOMitem": {
                                 "BOMitemName": "Support Board",
                                 "numberNeeded": 1,
-                                "costUSD": 0,
+                                "costUSD": 3.25,
                                 "source": "www.example.com"
                             }
                         }
@@ -666,10 +697,24 @@
                             "ap2Primary": true,
                             "ap1ID": 1721415764940,
                             "ap2ID": 1721415786752
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": 1721415786752,
+                            "ap2ID": 1721415718879
                         }
                     ],
                     "fileTypeVersion": 1,
-                    "compiledBom": {}
+                    "compiledBom": [
+                        {
+                            "BOMitemName": "Support Board",
+                            "numberNeeded": 1,
+                            "costUSD": 3.25,
+                            "source": "www.example.com"
+                        }
+                    ]
                 }
             ],
             "allConnectors": [
