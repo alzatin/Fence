@@ -308,6 +308,10 @@
                         {
                             "name": "3D shape 3",
                             "ioValue": 1721687041775
+                        },
+                        {
+                            "name": "3D shape 4",
+                            "ioValue": 1721687063916
                         }
                     ],
                     "unionType": "Assembly"
@@ -787,8 +791,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.5244708994708994,
-                    "y": 0.7493036211699164,
+                    "x": 0.5125661375661376,
+                    "y": 0.6824512534818942,
                     "uniqueID": 1721687041775,
                     "ioValues": [
                         {
@@ -801,24 +805,24 @@
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 0
+                            "ioValue": 1
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 0
+                            "ioValue": 50
                         }
                     ]
                 },
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.6256613756613757,
-                    "y": 0.8467966573816156,
+                    "x": 0.5562169312169313,
+                    "y": 0.871866295264624,
                     "uniqueID": 1721687063916,
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": ""
+                            "ioValue": 1721415718405
                         },
                         {
                             "name": "xDist",
@@ -826,11 +830,11 @@
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 0
+                            "ioValue": 1
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 0
+                            "ioValue": 20
                         }
                     ]
                 }
@@ -871,7 +875,13 @@
                     "ap1ID": 1721415718405,
                     "ap2ID": 1721687041775
                 },
-                null,
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721415718405,
+                    "ap2ID": 1721687063916
+                },
                 {
                     "ap1Name": "Geometry",
                     "ap2Name": "3D shape 1",
@@ -884,6 +894,13 @@
                     "ap2Name": "3D shape 3",
                     "ap2Primary": false,
                     "ap1ID": 1721687041775,
+                    "ap2ID": 1721415562524
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 4",
+                    "ap2Primary": false,
+                    "ap1ID": 1721687063916,
                     "ap2ID": 1721415562524
                 }
             ],
@@ -903,8 +920,8 @@
                 },
                 {
                     "BOMitemName": "Support Board",
-                    "numberNeeded": 1,
-                    "costUSD": 3.25,
+                    "numberNeeded": 2,
+                    "costUSD": 6.5,
                     "source": "www.example.com"
                 }
             ]
@@ -943,8 +960,8 @@
         },
         {
             "BOMitemName": "Support Board",
-            "numberNeeded": 1,
-            "costUSD": 3.25,
+            "numberNeeded": 2,
+            "costUSD": 6.5,
             "source": "www.example.com"
         }
     ],
