@@ -561,7 +561,7 @@
                         },
                         {
                             "name": "count",
-                            "ioValue": 16
+                            "ioValue": 24
                         },
                         {
                             "name": "shape",
@@ -611,7 +611,7 @@
                                 },
                                 {
                                     "name": "count",
-                                    "ioValue": 10
+                                    "ioValue": 24
                                 },
                                 {
                                     "name": "distanceX",
