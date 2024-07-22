@@ -2,6 +2,8 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Total: |0|$0.00| |
+|Fence Board|1|$1.92||
+|Fence Post|1|$23.00||
+|Total: |2|$24.92| |
 
- 3xCOG MSRP: $0.00
+ 3xCOG MSRP: $74.76
