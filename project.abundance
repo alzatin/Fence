@@ -16,7 +16,7 @@
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": 1721689807806
+                    "ioValue": 1721690171754
                 }
             ]
         },
@@ -1239,8 +1239,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.3353174603174603,
-            "y": 0.2646239554317549,
+            "x": 0.335978835978836,
+            "y": 0.3175487465181059,
             "uniqueID": 1721690153232,
             "ioValues": [
                 {
@@ -1249,7 +1249,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 840
+                    "ioValue": 830
                 },
                 {
                     "name": "yDist",
@@ -1304,13 +1304,6 @@
         },
         {
             "ap1Name": "Geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1721689807806,
-            "ap2ID": 1721415214313
-        },
-        {
-            "ap1Name": "Geometry",
             "ap2Name": "3D shape 1",
             "ap2Primary": false,
             "ap1ID": 1721689807806,
@@ -1322,6 +1315,13 @@
             "ap2Primary": false,
             "ap1ID": 1721690153232,
             "ap2ID": 1721690171754
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1721690171754,
+            "ap2ID": 1721415214313
         }
     ],
     "unitsKey": "Inches",
@@ -1335,8 +1335,8 @@
         },
         {
             "BOMitemName": "Fence Post",
-            "numberNeeded": 1,
-            "costUSD": 23,
+            "numberNeeded": 2,
+            "costUSD": 46,
             "source": "www.example.com"
         },
         {
