@@ -16,7 +16,7 @@
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": 1721415232788
+                    "ioValue": 1721689807806
                 }
             ]
         },
@@ -971,7 +971,7 @@
                 },
                 {
                     "name": "count",
-                    "ioValue": 2
+                    "ioValue": 4
                 },
                 {
                     "name": "shape",
@@ -979,7 +979,7 @@
                 },
                 {
                     "name": "distanceX",
-                    "ioValue": 93.25
+                    "ioValue": 92
                 }
             ],
             "topLevel": false,
@@ -1021,11 +1021,11 @@
                         },
                         {
                             "name": "count",
-                            "ioValue": 2
+                            "ioValue": 4
                         },
                         {
                             "name": "distanceX",
-                            "ioValue": 93.25
+                            "ioValue": 92
                         },
                         {
                             "name": "distanceY",
@@ -1247,17 +1247,17 @@
         },
         {
             "ap1Name": "Geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1721415232788,
-            "ap2ID": 1721415214313
-        },
-        {
-            "ap1Name": "Geometry",
             "ap2Name": "shape",
             "ap2Primary": false,
             "ap1ID": 1721415232788,
             "ap2ID": 1721689807806
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1721689807806,
+            "ap2ID": 1721415214313
         }
     ],
     "unitsKey": "Inches",
