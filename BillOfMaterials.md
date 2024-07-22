@@ -4,6 +4,7 @@
  |----|----------|-----|-----|
 |Fence Board|1|$1.92||
 |Fence Post|1|$23.00||
-|Total: |2|$24.92| |
+|Support Board|1|$3.25||
+|Total: |3|$28.17| |
 
- 3xCOG MSRP: $74.76
+ 3xCOG MSRP: $84.51

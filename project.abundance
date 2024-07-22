@@ -304,6 +304,10 @@
                         {
                             "name": "3D shape 2",
                             "ioValue": 1721415577020
+                        },
+                        {
+                            "name": "3D shape 3",
+                            "ioValue": 1721687041775
                         }
                     ],
                     "unionType": "Assembly"
@@ -336,8 +340,8 @@
                 {
                     "atomType": "Molecule",
                     "name": "Support Board",
-                    "x": 0.38888888888888884,
-                    "y": 0.8690807799442898,
+                    "x": 0.39219576719576715,
+                    "y": 0.8857938718662952,
                     "uniqueID": 1721415718405,
                     "ioValues": [],
                     "topLevel": false,
@@ -779,6 +783,56 @@
                             "source": "www.example.com"
                         }
                     ]
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.5244708994708994,
+                    "y": 0.7493036211699164,
+                    "uniqueID": 1721687041775,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721415718405
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.6256613756613757,
+                    "y": 0.8467966573816156,
+                    "uniqueID": 1721687063916,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": ""
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ]
                 }
             ],
             "allConnectors": [
@@ -812,9 +866,24 @@
                 },
                 {
                     "ap1Name": "Geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721415718405,
+                    "ap2ID": 1721687041775
+                },
+                null,
+                {
+                    "ap1Name": "Geometry",
                     "ap2Name": "3D shape 1",
                     "ap2Primary": false,
                     "ap1ID": 1721686486053,
+                    "ap2ID": 1721415562524
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 3",
+                    "ap2Primary": false,
+                    "ap1ID": 1721687041775,
                     "ap2ID": 1721415562524
                 }
             ],
@@ -830,6 +899,12 @@
                     "BOMitemName": "Fence Post",
                     "numberNeeded": 1,
                     "costUSD": 23,
+                    "source": "www.example.com"
+                },
+                {
+                    "BOMitemName": "Support Board",
+                    "numberNeeded": 1,
+                    "costUSD": 3.25,
                     "source": "www.example.com"
                 }
             ]
@@ -864,6 +939,12 @@
             "BOMitemName": "Fence Post",
             "numberNeeded": 1,
             "costUSD": 23,
+            "source": "www.example.com"
+        },
+        {
+            "BOMitemName": "Support Board",
+            "numberNeeded": 1,
+            "costUSD": 3.25,
             "source": "www.example.com"
         }
     ],
