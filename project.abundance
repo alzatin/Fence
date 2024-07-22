@@ -184,7 +184,7 @@
                 {
                     "atomType": "Molecule",
                     "name": "Fence Board",
-                    "x": 0.23544973544973544,
+                    "x": 0.17394179894179893,
                     "y": 0.7493036211699164,
                     "uniqueID": 1721415250838,
                     "ioValues": [],
@@ -319,8 +319,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.19113756613756613,
-                    "y": 0.31197771587743733,
+                    "x": 0.19246031746031744,
+                    "y": 0.3231197771587744,
                     "uniqueID": 1721415577020,
                     "ioValues": [
                         {
@@ -329,15 +329,15 @@
                         },
                         {
                             "name": "xDist",
-                            "ioValue": 0
+                            "ioValue": 2
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 0
+                            "ioValue": 3.5
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 0
+                            "ioValue": -26
                         }
                     ]
                 },
@@ -551,8 +551,8 @@
                 {
                     "atomType": "GitHubMolecule",
                     "name": "Linear Pattern",
-                    "x": 0.40939153439153436,
-                    "y": 0.5905292479108635,
+                    "x": 0.40542328042328046,
+                    "y": 0.6100278551532033,
                     "uniqueID": 1721686486053,
                     "ioValues": [
                         {
@@ -561,11 +561,11 @@
                         },
                         {
                             "name": "count",
-                            "ioValue": 24
+                            "ioValue": 21
                         },
                         {
                             "name": "shape",
-                            "ioValue": 1721415250838
+                            "ioValue": 1721689631637
                         },
                         {
                             "name": "distanceX",
@@ -607,11 +607,11 @@
                             "ioValues": [
                                 {
                                     "name": "inputID",
-                                    "ioValue": 1721415250838
+                                    "ioValue": 1721689631637
                                 },
                                 {
                                     "name": "count",
-                                    "ioValue": 24
+                                    "ioValue": 21
                                 },
                                 {
                                     "name": "distanceX",
@@ -837,6 +837,31 @@
                             "ioValue": 20
                         }
                     ]
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.29894179894179895,
+                    "y": 0.7743732590529249,
+                    "uniqueID": 1721689631637,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721415250838
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 2.75
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ]
                 }
             ],
             "allConnectors": [
@@ -849,10 +874,10 @@
                 },
                 {
                     "ap1Name": "Geometry",
-                    "ap2Name": "shape",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 1721415250838,
-                    "ap2ID": 1721686486053
+                    "ap2ID": 1721689631637
                 },
                 {
                     "ap1Name": "geometry",
@@ -902,6 +927,13 @@
                     "ap2Primary": false,
                     "ap1ID": 1721687063916,
                     "ap2ID": 1721415562524
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "shape",
+                    "ap2Primary": false,
+                    "ap1ID": 1721689631637,
+                    "ap2ID": 1721686486053
                 }
             ],
             "fileTypeVersion": 1,
