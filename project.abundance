@@ -1024,284 +1024,6 @@
             ]
         },
         {
-            "atomType": "GitHubMolecule",
-            "name": "Linear Pattern",
-            "x": 0.36507936507936506,
-            "y": 0.6434540389972144,
-            "uniqueID": 1721689807806,
-            "ioValues": [
-                {
-                    "name": "distanceY",
-                    "ioValue": 0
-                },
-                {
-                    "name": "count",
-                    "ioValue": 9
-                },
-                {
-                    "name": "shape",
-                    "ioValue": 1721415232788
-                },
-                {
-                    "name": "distanceX",
-                    "ioValue": 92
-                }
-            ],
-            "topLevel": false,
-            "allAtoms": [
-                {
-                    "atomType": "Input",
-                    "name": "distanceY",
-                    "x": 0.013333333333333334,
-                    "y": 0.25705329153605017,
-                    "uniqueID": 1721689808237,
-                    "ioValues": []
-                },
-                {
-                    "atomType": "Input",
-                    "name": "count",
-                    "x": 0.013333333333333334,
-                    "y": 0.4482758620689655,
-                    "uniqueID": 1721689808203,
-                    "ioValues": []
-                },
-                {
-                    "atomType": "Input",
-                    "name": "shape",
-                    "x": 0.013333333333333334,
-                    "y": 0.6394984326018809,
-                    "uniqueID": 1721689807728,
-                    "ioValues": []
-                },
-                {
-                    "atomType": "Code",
-                    "name": "Code",
-                    "x": 0.4928092042186002,
-                    "y": 0.331306990881459,
-                    "uniqueID": 1721689808178,
-                    "ioValues": [
-                        {
-                            "name": "inputID",
-                            "ioValue": 1721415232788
-                        },
-                        {
-                            "name": "count",
-                            "ioValue": 9
-                        },
-                        {
-                            "name": "distanceX",
-                            "ioValue": 92
-                        },
-                        {
-                            "name": "distanceY",
-                            "ioValue": 0
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "//Linear Pattern 1\n//Inputs:[inputID, count, distanceX, distanceY]\n\nconst bomAssembly = [];\n\nconst polarCopies = (shape, count, x, y) => {\n  console.log(shape);\n\n  const base = shape.geometry[0];\n  const copies = [];\n  for (let i = 0; i < count; i++) {\n    copies.push({\n      geometry: [base.clone().translate(i * x, i * y)],\n      tags: shape.tags,\n      plane: shape.plane,\n      color: shape.color,\n      bom: shape.bom,\n    });\n    if (shape.bom.length > 0) {\n      bomAssembly.push(...shape.bom);\n    }\n  }\n  let copyAssembly = copies;\n  return copyAssembly;\n};\n\nreturn started.then(() => {\n  console.log(inputID);\n  if (inputID !== 10) {\n    library[targetID] = actOnLeafs(library[inputID], (leaf) => {\n      return {\n        geometry: polarCopies(leaf, count, distanceX, distanceY),\n        tags: library[inputID].tags,\n        plane: library[inputID].plane,\n        color: library[inputID].color,\n        bom: bomAssembly,\n      };\n    });\n  } else {\n    console.log(\"input id is not a valid geometry\");\n    //faulty input\n    library[targetID] = {\n      geometry: [drawRectangle(10, 10)],\n      color: \"#FFB09D\",\n      tags: [],\n      bom: [],\n    };\n  }\n\n  console.log(result);\n  return library[targetID];\n});\n"
-                },
-                {
-                    "atomType": "Input",
-                    "name": "distanceX",
-                    "x": 0.013333333333333334,
-                    "y": 0.8087774294670846,
-                    "uniqueID": 1721689808180,
-                    "ioValues": []
-                },
-                {
-                    "atomType": "Circle",
-                    "name": "Circle",
-                    "x": 0.16395014381591563,
-                    "y": 0.8541033434650457,
-                    "uniqueID": 1721689808161,
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 4
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 0.31639501438159157,
-                    "y": 0.7507598784194529,
-                    "uniqueID": 1721689807657,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1721689808161
-                        },
-                        {
-                            "name": "height",
-                            "ioValue": 8
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Readme",
-                    "name": "README",
-                    "x": 0.8705656759348034,
-                    "y": 0.723404255319149,
-                    "uniqueID": 1721689807843,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1721689807593
-                        }
-                    ],
-                    "readmeText": "Readme text here",
-                    "global": true
-                },
-                {
-                    "atomType": "Output",
-                    "name": "Output",
-                    "x": 0.98,
-                    "y": 0.5,
-                    "uniqueID": 1721689808112,
-                    "ioValues": [
-                        {
-                            "name": "number or geometry",
-                            "ioValue": 1721689808178
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Code",
-                    "name": "Code",
-                    "x": 0.6069031639501438,
-                    "y": 0.6231003039513677,
-                    "uniqueID": 1721689807593,
-                    "ioValues": [
-                        {
-                            "name": "inputID",
-                            "ioValue": 1721689807706
-                        },
-                        {
-                            "name": "count",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "distanceX",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "distanceY",
-                            "ioValue": 10
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "//Linear Pattern 1\n//Inputs:[inputID, count, distanceX, distanceY]\n\nconst bomAssembly = [];\n\nconst polarCopies = (shape, count, x, y) => {\n  console.log(shape);\n\n  const base = shape.geometry[0];\n  const copies = [];\n  for (let i = 0; i < count; i++) {\n    copies.push({\n      geometry: [base.clone().translate(i * x, i * y)],\n      tags: shape.tags,\n      plane: shape.plane,\n      color: shape.color,\n      bom: shape.bom,\n    });\n    if (shape.bom.length > 0) {\n      bomAssembly.push(...shape.bom);\n    }\n  }\n  let copyAssembly = copies;\n  return copyAssembly;\n};\n\nreturn started.then(() => {\n  console.log(inputID);\n  if (inputID !== 10) {\n    library[targetID] = actOnLeafs(library[inputID], (leaf) => {\n      return {\n        geometry: polarCopies(leaf, count, distanceX, distanceY),\n        tags: library[inputID].tags,\n        plane: library[inputID].plane,\n        color: library[inputID].color,\n        bom: bomAssembly,\n      };\n    });\n  } else {\n    console.log(\"input id is not a valid geometry\");\n    //faulty input\n    library[targetID] = {\n      geometry: [drawRectangle(10, 10)],\n      color: \"#FFB09D\",\n      tags: [],\n      bom: [],\n    };\n  }\n\n  console.log(result);\n  return library[targetID];\n});\n"
-                },
-                {
-                    "atomType": "Add-BOM-Tag",
-                    "name": "Add BOM Tag",
-                    "x": 0.4372003835091083,
-                    "y": 0.7659574468085106,
-                    "uniqueID": 1721689807706,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1721689807657
-                        }
-                    ],
-                    "BOMitem": {
-                        "BOMitemName": "rounddowel",
-                        "numberNeeded": 1,
-                        "costUSD": 10,
-                        "source": "www.example.com"
-                    }
-                }
-            ],
-            "allConnectors": [
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "distanceY",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689808237,
-                    "ap2ID": 1721689808178
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "count",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689808203,
-                    "ap2ID": 1721689808178
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "inputID",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689807728,
-                    "ap2ID": 1721689808178
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689808178,
-                    "ap2ID": 1721689808112
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "distanceX",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689808180,
-                    "ap2ID": 1721689808178
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1721689808161,
-                    "ap2ID": 1721689807657
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1721689807657,
-                    "ap2ID": 1721689807706
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689807593,
-                    "ap2ID": 1721689807843
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "inputID",
-                    "ap2Primary": false,
-                    "ap1ID": 1721689807706,
-                    "ap2ID": 1721689807593
-                }
-            ],
-            "gitHubUniqueID": 801181204,
-            "fileTypeVersion": 1,
-            "compiledBom": [
-                {
-                    "BOMitemName": "Fence Post",
-                    "numberNeeded": 1,
-                    "costUSD": 23,
-                    "source": "www.example.com"
-                },
-                {
-                    "BOMitemName": "Support Board",
-                    "numberNeeded": 2,
-                    "costUSD": 6.5,
-                    "source": "www.example.com"
-                },
-                {
-                    "BOMitemName": "Fence Board",
-                    "numberNeeded": 16,
-                    "costUSD": 30.720000000000013,
-                    "source": "www.example.com"
-                }
-            ]
-        },
-        {
             "atomType": "Move",
             "name": "Move",
             "x": 0.335978835978836,
@@ -1334,15 +1056,332 @@
             "uniqueID": 1721690171754,
             "ioValues": [
                 {
-                    "name": "3D shape 1",
-                    "ioValue": 1721689807806
-                },
-                {
                     "name": "3D shape 2",
                     "ioValue": 1721690153232
+                },
+                {
+                    "name": "3D shape 3",
+                    "ioValue": 1721758052611
                 }
             ],
             "unionType": "Assembly"
+        },
+        {
+            "atomType": "GitHubMolecule",
+            "name": "Linear Pattern",
+            "x": 0.38095238095238093,
+            "y": 0.6657381615598886,
+            "uniqueID": 1721758052611,
+            "ioValues": [
+                {
+                    "name": "distanceY",
+                    "ioValue": 0
+                },
+                {
+                    "name": "count",
+                    "ioValue": 9
+                },
+                {
+                    "name": "shape",
+                    "ioValue": 1721415232788
+                },
+                {
+                    "name": "distanceX",
+                    "ioValue": 92
+                }
+            ],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Input",
+                    "name": "distanceY",
+                    "x": 0.013333333333333334,
+                    "y": 0.25705329153605017,
+                    "uniqueID": 1721758052900,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Input",
+                    "name": "count",
+                    "x": 0.013333333333333334,
+                    "y": 0.4482758620689655,
+                    "uniqueID": 1721758052897,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Input",
+                    "name": "shape",
+                    "x": 0.013333333333333334,
+                    "y": 0.6394984326018809,
+                    "uniqueID": 1721758052997,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.47354497354497355,
+                    "y": 0.33434650455927056,
+                    "uniqueID": 1721758052918,
+                    "ioValues": [
+                        {
+                            "name": "inputID",
+                            "ioValue": 1721415232788
+                        },
+                        {
+                            "name": "count",
+                            "ioValue": 9
+                        },
+                        {
+                            "name": "distanceX",
+                            "ioValue": 92
+                        },
+                        {
+                            "name": "distanceY",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "backUpShape",
+                            "ioValue": 1721758052785
+                        }
+                    ],
+                    "codeVersion": 1,
+                    "code": "//Linear Pattern 1\n//Inputs:[inputID, count, distanceX, distanceY, backUpShape]\n\nconst bomAssembly = [];\n\nconst polarCopies = (shape, count, x, y) => {\n  const copies = [];\n  for (let i = 0; i < count; i++) {\n    copies.push(\n      actOnLeafs(shape, (leaf) => {\n        return {\n          geometry: [leaf.geometry[0].clone().translate(i * x, i * y)],\n          tags: leaf.tags,\n          plane: leaf.plane,\n          color: leaf.color,\n          bom: leaf.bom,\n        };\n      })\n    );\n\n    if (shape.bom.length > 0) {\n      bomAssembly.push(...shape.bom);\n    }\n  }\n  let copyAssembly = copies;\n  return copyAssembly;\n};\n\nreturn started.then(() => {\n  if (inputID !== 10) {\n    library[targetID] = {\n      geometry: polarCopies(library[inputID], count, distanceX, distanceY),\n      tags: [],\n      plane: library[inputID].plane,\n      color: library[inputID].color,\n      bom: bomAssembly,\n    };\n  } else {\n    //faulty input\n    library[targetID] = {\n      geometry: polarCopies(library[backUpShape], count, distanceX, distanceY),\n      tags: [],\n      plane: library[backUpShape].plane,\n      color: library[backUpShape].color,\n      bom: bomAssembly,\n    };\n  }\n  return library[targetID];\n});\n"
+                },
+                {
+                    "atomType": "Input",
+                    "name": "distanceX",
+                    "x": 0.013333333333333334,
+                    "y": 0.8087774294670846,
+                    "uniqueID": 1721758052927,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.16395014381591563,
+                    "y": 0.8541033434650457,
+                    "uniqueID": 1721758052586,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 4
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.32502396931927136,
+                    "y": 0.6261398176291794,
+                    "uniqueID": 1721758052992,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721758052586
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 8
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Readme",
+                    "name": "README",
+                    "x": 0.775647171620326,
+                    "y": 0.6990881458966566,
+                    "uniqueID": 1721758052558,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721758052785
+                        }
+                    ],
+                    "readmeText": "Readme text here",
+                    "global": true
+                },
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": 1721758053156,
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": 1721758052918
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Join",
+                    "name": "Assembly",
+                    "x": 0.4603174603174603,
+                    "y": 0.6899696048632219,
+                    "uniqueID": 1721758052785,
+                    "ioValues": [
+                        {
+                            "name": "3D shape 1",
+                            "ioValue": 1721758052992
+                        },
+                        {
+                            "name": "3D shape 3",
+                            "ioValue": 1721758052542
+                        }
+                    ],
+                    "unionType": "Assembly"
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.29050814956855225,
+                    "y": 0.9027355623100304,
+                    "uniqueID": 1721758053118,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721758052586
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.37296260786193675,
+                    "y": 0.8875379939209727,
+                    "uniqueID": 1721758052542,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1721758053118
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 10
+                        }
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "distanceY",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052900,
+                    "ap2ID": 1721758052918
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "count",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052897,
+                    "ap2ID": 1721758052918
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "inputID",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052997,
+                    "ap2ID": 1721758052918
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052918,
+                    "ap2ID": 1721758053156
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "distanceX",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052927,
+                    "ap2ID": 1721758052918
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721758052586,
+                    "ap2ID": 1721758052992
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721758052586,
+                    "ap2ID": 1721758053118
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052992,
+                    "ap2ID": 1721758052785
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "backUpShape",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052785,
+                    "ap2ID": 1721758052918
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052785,
+                    "ap2ID": 1721758052558
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1721758053118,
+                    "ap2ID": 1721758052542
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 3",
+                    "ap2Primary": false,
+                    "ap1ID": 1721758052542,
+                    "ap2ID": 1721758052785
+                }
+            ],
+            "gitHubUniqueID": 801181204,
+            "fileTypeVersion": 1,
+            "compiledBom": [
+                {
+                    "BOMitemName": "Fence Post",
+                    "numberNeeded": 9,
+                    "costUSD": 207,
+                    "source": "www.example.com"
+                },
+                {
+                    "BOMitemName": "Support Board",
+                    "numberNeeded": 18,
+                    "costUSD": 58.5,
+                    "source": "www.example.com"
+                },
+                {
+                    "BOMitemName": "Fence Board",
+                    "numberNeeded": 144,
+                    "costUSD": 276.47999999999945,
+                    "source": "www.example.com"
+                }
+            ]
         }
     ],
     "allConnectors": [
@@ -1365,14 +1404,7 @@
             "ap2Name": "shape",
             "ap2Primary": false,
             "ap1ID": 1721415232788,
-            "ap2ID": 1721689807806
-        },
-        {
-            "ap1Name": "Geometry",
-            "ap2Name": "3D shape 1",
-            "ap2Primary": false,
-            "ap1ID": 1721689807806,
-            "ap2ID": 1721690171754
+            "ap2ID": 1721758052611
         },
         {
             "ap1Name": "geometry",
@@ -1387,6 +1419,13 @@
             "ap2Primary": false,
             "ap1ID": 1721690171754,
             "ap2ID": 1721415214313
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "3D shape 3",
+            "ap2Primary": false,
+            "ap1ID": 1721758052611,
+            "ap2ID": 1721690171754
         }
     ],
     "unitsKey": "Inches",
@@ -1394,20 +1433,20 @@
     "compiledBom": [
         {
             "BOMitemName": "Fence Post",
-            "numberNeeded": 2,
-            "costUSD": 46,
+            "numberNeeded": 10,
+            "costUSD": 230,
             "source": "www.example.com"
         },
         {
             "BOMitemName": "Support Board",
-            "numberNeeded": 2,
-            "costUSD": 6.5,
+            "numberNeeded": 18,
+            "costUSD": 58.5,
             "source": "www.example.com"
         },
         {
             "BOMitemName": "Fence Board",
-            "numberNeeded": 16,
-            "costUSD": 30.720000000000013,
+            "numberNeeded": 144,
+            "costUSD": 276.47999999999945,
             "source": "www.example.com"
         }
     ],
