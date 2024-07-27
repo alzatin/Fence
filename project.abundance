@@ -1079,7 +1079,7 @@
                 },
                 {
                     "name": "count",
-                    "ioValue": 9
+                    "ioValue": 8
                 },
                 {
                     "name": "shape",
@@ -1129,7 +1129,7 @@
                         },
                         {
                             "name": "count",
-                            "ioValue": 9
+                            "ioValue": 8
                         },
                         {
                             "name": "distanceX",
@@ -1365,20 +1365,20 @@
             "compiledBom": [
                 {
                     "BOMitemName": "Fence Post",
-                    "numberNeeded": 9,
-                    "costUSD": 207,
+                    "numberNeeded": 8,
+                    "costUSD": 184,
                     "source": "www.example.com"
                 },
                 {
                     "BOMitemName": "Support Board",
-                    "numberNeeded": 18,
-                    "costUSD": 58.5,
+                    "numberNeeded": 16,
+                    "costUSD": 52,
                     "source": "www.example.com"
                 },
                 {
                     "BOMitemName": "Fence Board",
-                    "numberNeeded": 144,
-                    "costUSD": 276.47999999999945,
+                    "numberNeeded": 128,
+                    "costUSD": 245.75999999999934,
                     "source": "www.example.com"
                 }
             ]
@@ -1433,20 +1433,20 @@
     "compiledBom": [
         {
             "BOMitemName": "Fence Post",
-            "numberNeeded": 10,
-            "costUSD": 230,
+            "numberNeeded": 9,
+            "costUSD": 207,
             "source": "www.example.com"
         },
         {
             "BOMitemName": "Support Board",
-            "numberNeeded": 18,
-            "costUSD": 58.5,
+            "numberNeeded": 16,
+            "costUSD": 52,
             "source": "www.example.com"
         },
         {
             "BOMitemName": "Fence Board",
-            "numberNeeded": 144,
-            "costUSD": 276.47999999999945,
+            "numberNeeded": 128,
+            "costUSD": 245.75999999999934,
             "source": "www.example.com"
         }
     ],
