@@ -2,9 +2,9 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Support Board|16|$52.00|www.example.com|
-|Fence Board|128|$245.76|www.example.com|
-|Fence Post|9|$207.00|www.grain.com|
+|Support Board|16|$52.00||
+|Fence Board|128|$245.76||
+|Fence Post|9|$207.00||
 |Total: |153|$504.76| |
 
  3xCOG MSRP: $1514.28
